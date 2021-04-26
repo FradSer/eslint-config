@@ -1,18 +1,33 @@
 module.exports = {
-  plugins: [
-    // Utilise community Standard ruleset
+  extends: [
     'standard',
+    'prettier',
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:prettier/recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended'
+  ],
+  plugins: [
+    '@typescript-eslint',
     // Runs prettier as an eslint rule
     'prettier'
   ],
-  extends: [
-    // Always extend eslint's recommended ruleset
-    'eslint:recommended',
-    // Extend community Standard ruleset
-    'standard',
-    // Turn off eslint rules that could conflict with prettier
-    'plugin:prettier/recommended'
-  ],
+  // See https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/README.md#configuration
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true
+    }
+  },
+  settings: {
+    react: {
+      // See https://github.com/preactjs/eslint-config-preact/blob/3ac23ffe761236aae1e5cc5b44614d06d71e3476/index.js#L51-L53
+      pragma: 'h',
+      version: '16.0'
+    }
+  },
   rules: {
     // var is block scoped, lets keep it that way
     'block-scoped-var': 'error',

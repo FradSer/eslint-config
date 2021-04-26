@@ -1,6 +1,6 @@
 {
-  "name": "@zestia/eslint-config",
-  "version": "4.0.3",
+  "name": "@fradser/eslint-config",
+  "version": "5.0.4",
   "description": "ESLint configs",
   "main": "index.js",
   "scripts": {
@@ -11,21 +11,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zestia/eslint-config.git"
+    "url": "git+https://github.com/fradser/eslint-config.git"
   },
   "keywords": [
     "eslint",
     "eslintconfig",
     "prettier"
   ],
-  "author": "Zestia",
+  "author": "Frad LEE",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/zestia/eslint-config/issues"
+    "url": "https://github.com/fradser/eslint-config/issues"
   },
-  "homepage": "https://github.com/zestia/eslint-config",
+  "homepage": "https://github.com/fradser/eslint-config",
   "dependencies": {
-    "babel-eslint": "^10.1.0",
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-ember": "^10.3.0",
@@ -35,12 +36,13 @@
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-promise": "^4.3.1",
     "eslint-plugin-qunit": "^6.0.0",
-    "eslint-plugin-standard": "^5.0.0"
+    "eslint-plugin-react": "^7.23.2"
   },
   "devDependencies": {
-    "@zestia/prettier-config": "^1.0.4",
+    "@fradser/prettier-config": "^2",
     "eslint": "^7.23.0",
     "prettier": "^2.2.1",
-    "release-it": "^14.5.1"
+    "release-it": "^14.5.1",
+    "typescript": "^4.2.4"
   }
 }
